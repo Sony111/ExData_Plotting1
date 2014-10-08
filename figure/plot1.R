@@ -11,7 +11,7 @@ PCDate<-subset(PowerConsumption,PowerConsumption$Date == "2007-2-1" | PowerConsu
 
 object.size(PCDate) #808288 bytes
 
-PCDate$Date <- strptime(paste(PCDate$Date,PCDate$Time), "%Y-%m-%d %H:%M:%S") # Convereting into Date 
+PCDate$Date <- strptime(paste(PCDate$Date,PCDate$Time), "%Y-%m-%d %H:%M:%S") # Concatinating date and time into Date 
 head(PCDate$Global_active_power)
 
 hist(as.integer(PCDate$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power(Kilowatts)",breaks=12,axes=FALSE)
